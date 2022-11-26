@@ -28,16 +28,6 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework:spring-webflux")
     testImplementation("org.springframework.graphql:spring-graphql-test")
-
-    // Netflix DGS Framework (Domain Graph Service)
-    implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
-}
-
-// Netflix DGS Framework (Domain Graph Service)
-dependencyManagement {
-    imports {
-        mavenBom("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release")
-    }
 }
 
 tasks.withType<KotlinCompile> {

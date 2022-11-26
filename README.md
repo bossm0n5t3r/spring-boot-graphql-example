@@ -2,21 +2,15 @@
 
 - `Kotlin`
 - `Spring Boot`
+  - `Spring for GraphQL`
 - `JPA`
-- `GraphQL`
-  - `Netflix DGS Framework (Domain Graph Service)`
 
 ## cURL
 
 ```shell
-curl --location --request POST 'localhost:8080/graphql' \
---header 'Content-Type: application/graphql' \
---data-raw 'query {
-    getAllArticles {
-        id,
-        subject
-    }
-}'
+curl --location --request POST 'http://localhost:8080/graphql' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"query {\n    getAllArticles {\n        id\n        subject\n    }\n}","variables":{}}'
 ```
 
 ## HTTPie
