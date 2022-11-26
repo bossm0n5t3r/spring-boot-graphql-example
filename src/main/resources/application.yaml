@@ -11,3 +11,8 @@ spring:
   h2:
     console:
       enabled: true
+  graphql:
+    schema:
+      locations: classpath:schema/
+    graphiql:
+      enabled: true
