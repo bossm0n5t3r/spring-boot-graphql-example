@@ -15,6 +15,11 @@ spring:
     schema:
       # Default location is classpath:graphql/**/
       # BUT not working, so Use 'classpath*:' and then it works.
+
+      # Issues
+      # https://github.com/spring-projects/spring-boot/issues/31772
+
+      # Related codes
       # https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/graphql/GraphQlProperties.java#L75
       locations: classpath*:graphql/**/
     graphiql:
