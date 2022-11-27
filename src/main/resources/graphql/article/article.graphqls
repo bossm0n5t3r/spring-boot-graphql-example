@@ -1,0 +1,12 @@
+type Query {
+    getAllArticles: [ArticleDto]
+    getArticle(id: ID!): ArticleDto
+}
+
+type ArticleDto {
+    id: ID!,
+    subject: String!,
+    content: String!,
+    hits: Int!,
+    recommend: Int!,
+}
