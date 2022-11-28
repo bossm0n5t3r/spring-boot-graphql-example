@@ -1,6 +1,12 @@
 type Query {
-    getAllArticles: [ArticleDto]
-    getArticle(id: ID!): ArticleDto
+    allArticles: [ArticleDto]
+    article(articleId: ID!): ArticleDto
+}
+
+type Mutation {
+    createArticle(dto: MutateArticleDto!): ArticleDto
+    updateArticle(articleId: ID!, dto: MutateArticleDto!): ArticleDto
+    deleteArticle(articleId: ID!): ArticleDto
 }
 
 type ArticleDto {
@@ -9,4 +15,9 @@ type ArticleDto {
     content: String!,
     hits: Int!,
     recommend: Int!,
+}
+
+input MutateArticleDto {
+    subject: String!,
+    content: String!,
 }
