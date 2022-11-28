@@ -16,7 +16,7 @@ curl --location --request POST 'http://localhost:8080/graphql' \
 ## HTTPie
 
 ```shell
- http POST http://localhost:8080/graphql query="{getAllArticles{id,subject}}"
+ http POST http://localhost:8080/graphql query="{getAllArticles{id subject}}"
 HTTP/1.1 200 
 Connection: keep-alive
 Content-Length: 120
