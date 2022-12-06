@@ -3,9 +3,9 @@ package graphql.article.domain
 import graphql.article.application.dto.CreateArticleDto
 import graphql.article.application.dto.UpdateArticleDto
 import graphql.common.domain.BaseEntity
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Table
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.Table
 
 @Entity
 @Table(name = "article_info")
