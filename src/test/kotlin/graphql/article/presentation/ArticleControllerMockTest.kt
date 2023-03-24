@@ -81,7 +81,8 @@ class ArticleControllerMockTest @Autowired private constructor(
 
         val dummySubject = faker.book().title()
         val dummyContent = faker.lorem().characters()
-        val mockArticle = mockk<Article> {
+        val mockArticle = mockk<Article>(relaxed = true) {
+            every { id } returns expectedId
             every { subject } returns dummySubject
             every { content } returns dummyContent
         }
@@ -124,7 +125,7 @@ class ArticleControllerMockTest @Autowired private constructor(
     fun shouldCreateNewArticle() {
         val expectedSubject = faker.book().title()
         val expectedContent = faker.lorem().characters()
-        every { mockArticleRepository.save(any()) } returns mockk {
+        every { mockArticleRepository.save(any()) } returns mockk(relaxed = true) {
             every { id } returns Random.nextLong()
             every { subject } returns expectedSubject
             every { content } returns expectedContent
@@ -197,12 +198,10 @@ class ArticleControllerMockTest @Autowired private constructor(
 
     @Test
     fun shouldRemoveArticleWithValidId() {
-        val mockArticle = mockk<Article> {
+        val mockArticle = mockk<Article>(relaxed = true) {
             every { id } returns Random.nextLong()
             every { subject } returns faker.book().title()
             every { content } returns faker.lorem().characters()
-            every { hits } returns Random.nextInt()
-            every { recommend } returns Random.nextInt()
         }
         every { mockArticleRepository.findById(any()) } returns Optional.of(mockArticle)
         every { mockArticleRepository.deleteById(any()) } just runs
