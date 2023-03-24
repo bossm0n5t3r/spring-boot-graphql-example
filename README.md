@@ -1,11 +1,13 @@
 # spring-boot-graphql-example
 
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0.0-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0.4-brightgreen)
 
 - `Kotlin`
 - `Spring Boot`
   - `Spring for GraphQL`
 - `JPA`
+
+- [https://docs.spring.io/spring-graphql/docs/current/reference/html/](https://docs.spring.io/spring-graphql/docs/current/reference/html/)
 
 ## HTTPie
 

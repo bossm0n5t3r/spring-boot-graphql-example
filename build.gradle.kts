@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "3.0.0"
+    id("org.springframework.boot") version "3.0.4"
     id("io.spring.dependency-management") version "1.1.0"
-    kotlin("jvm") version "1.7.21"
-    kotlin("plugin.spring") version "1.7.21"
-    kotlin("plugin.jpa") version "1.7.21"
+    kotlin("jvm") version "1.8.10"
+    kotlin("plugin.spring") version "1.8.10"
+    kotlin("plugin.jpa") version "1.8.10"
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
 }
 
@@ -28,6 +28,9 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework:spring-webflux")
     testImplementation("org.springframework.graphql:spring-graphql-test")
+    testImplementation("io.mockk:mockk:1.13.4")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("net.datafaker:datafaker:1.8.1")
 }
 
 tasks.withType<KotlinCompile> {

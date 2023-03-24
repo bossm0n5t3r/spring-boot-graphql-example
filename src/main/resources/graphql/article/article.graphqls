@@ -1,23 +1,30 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type ArticleDto {
+    content: String!
+    hits: Int!
+    id: ID!
+    recommend: Int!
+    subject: String!
+}
+
+type Mutation {
+    createArticle(dto: MutateArticleDto!): ArticleDto
+    deleteArticle(articleId: ID!): ArticleDto
+    updateArticle(articleId: ID!, dto: MutateArticleDto!): ArticleDto
+}
+
 type Query {
     allArticles: [ArticleDto]
     article(articleId: ID!): ArticleDto
 }
 
-type Mutation {
-    createArticle(dto: MutateArticleDto!): ArticleDto
-    updateArticle(articleId: ID!, dto: MutateArticleDto!): ArticleDto
-    deleteArticle(articleId: ID!): ArticleDto
-}
-
-type ArticleDto {
-    id: ID!,
-    subject: String!,
-    content: String!,
-    hits: Int!,
-    recommend: Int!,
-}
-
 input MutateArticleDto {
-    subject: String!,
-    content: String!,
+    content: String!
+    subject: String!
 }

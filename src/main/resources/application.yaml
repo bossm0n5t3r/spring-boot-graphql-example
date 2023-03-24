@@ -24,3 +24,4 @@ spring:
       locations: classpath*:graphql/**/
     graphiql:
       enabled: true
+      path: / # graphiql url : http://localhost:8080/?path=/graphql
