@@ -29,6 +29,8 @@ dependencies {
     testImplementation("org.springframework:spring-webflux")
     testImplementation("org.springframework.graphql:spring-graphql-test")
     testImplementation("io.mockk:mockk:1.13.4")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("net.datafaker:datafaker:1.8.1")
 }
 
 tasks.withType<KotlinCompile> {
